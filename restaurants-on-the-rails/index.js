@@ -47,6 +47,9 @@ function getStations() {
     headers: { Accept: "application/json" }
   })
     .then(function (result) {
+      if (!result.ok) {
+        throw new Error("API issue.")
+      }
       return result.json();
     })
     .then(function (body) {
@@ -64,8 +67,13 @@ function getStations() {
     </calcite-card>`
       });
     document.querySelector("#result-cards").innerHTML = cardDiv
-      } document.querySelector("#result-cards").textContent = "No Stations to Display"
-    });
+      } 
+      throw new Error("No stations returned.")
+      document.querySelector("#result-cards").textContent = "No Stations to Display"
+    })
+  .catch(error) {
+    console.error(error);
+  };
 }
 
 console.log(getStations());
