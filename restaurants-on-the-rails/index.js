@@ -47,9 +47,7 @@ function getStations() {
     headers: { Accept: "application/json" }
   })
     .then(function (result) {
-      if (!result.ok) {
-        throw new Error("API issue.")
-      }
+      console.log(result);
       return result.json();
     })
     .then(function (body) {
@@ -57,7 +55,6 @@ function getStations() {
       let cardDiv = ''
       if (body.features.length > 0) {
       body.features.forEach((feature) => {
-        console.log(body.features[0]);
         //construct some HTML!
         cardDiv += `<calcite-card>
       <span slot="title">${feature.attributes.name.trim()}</span>
@@ -70,18 +67,15 @@ function getStations() {
     document.querySelector("#result-cards").innerHTML = cardDiv
       } 
       document.querySelector("#result-cards").textContent = "No Stations to Display"
-      throw new Error("No stations returned.");
     //create dropdown
       let dropdownDiv = ''
       if (body.features.length > 0) {
       body.features.forEach((feature) => {
-        console.log(body.features[0]);
         //construct some HTML!
-        dropdownDiv += `<calcite-combobox-item value="${feature.attributes.name.trim()" text-label="${feature.attributes.name.trim()"></calcite-combobox-item>`
+        dropdownDiv += `<calcite-combobox-item value="${feature.attributes.name.trim()}" text-label="${feature.attributes.name.trim()}"></calcite-combobox-item>`
       });
     document.querySelector("calcite-combobox").innerHTML = dropdownDiv
       } 
-      throw new Error("No stations returned.");
     })
   .catch(error => {
     console.error(error);
@@ -89,4 +83,3 @@ function getStations() {
 }
 
 getStations();
-
