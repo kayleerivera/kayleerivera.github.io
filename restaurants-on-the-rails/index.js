@@ -71,9 +71,9 @@ function getStations() {
       throw new Error("No stations returned.")
       document.querySelector("#result-cards").textContent = "No Stations to Display"
     })
-  .catch(error) {
+  .catch(error => {
     console.error(error);
-  };
+  });
 }
 
 getStations();
