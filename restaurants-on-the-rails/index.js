@@ -51,6 +51,7 @@ function getStations() {
     })
     .then(function (body) {
       let cardDiv = ''
+      if (body.features.length > 0) {
       body.features.forEach((feature) => {
         console.log(body.features[0]);
         //construct some HTML!
@@ -63,6 +64,7 @@ function getStations() {
     </calcite-card>`
       });
     document.querySelector("#result-cards").innerHTML = cardDiv
+      } document.querySelector("#result-cards").textContent = "No Stations to Display"
     });
 }
 
