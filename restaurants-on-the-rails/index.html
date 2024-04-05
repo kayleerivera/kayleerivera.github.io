@@ -1,1 +1,46 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" />
+  <title>Restaurants on the Rails</title>
 
+  <script src="https://js.arcgis.com/calcite-components/2.6.0/calcite.esm.js" type="module"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/2.6.0/calcite.css" />
+
+  <script src="https://js.arcgis.com/4.29/"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css" />
+
+</head>
+
+<body>
+  <h1>Restaurants on the Rails</h1>
+
+  <!--dropdown-->
+  <div id="station-filter">
+  <calcite-combobox placeholder="Select a field" selection-mode="single">
+    <calcite-combobox-item value="Carson Station" text-label="Carson Station"></calcite-combobox-item>
+    <calcite-combobox-item value="East/West Station" text-label="East/West Station"></calcite-combobox-item>
+  </calcite-combobox>
+  </div>
+
+  <!-- tiles -->
+  <div id="result-cards">
+    <calcite-card>
+      <span slot="title">City-owned golf courses</span>
+      <span slot="subtitle">Department of Recreation - Municipality of Acme</span>
+      <div slot="footer-start">
+        <calcite-chip value="calcite chip" kind="brand" icon="pin-tear">
+          Recent
+        </calcite-chip>
+      </div>
+    </calcite-card>
+    <calcite-card>
+      <span slot="title">City-owned golf courses</span>
+      <span slot="subtitle">Department of Recreation - Municipality of Acme</span>
+      <div slot="footer-start">
+        <calcite-chip value="calcite chip" kind="brand" icon="pin-tear">
+          Recent
+        </calcite-chip>
+      </div>
+    </calcite-card>
+  </div>
+</body>
