@@ -76,5 +76,5 @@ function getStations() {
   };
 }
 
-console.log(getStations());
+getStations();
 
