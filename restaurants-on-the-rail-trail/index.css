@@ -6,7 +6,7 @@ h1{
 
 #filters{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-bottom: 50px;
   align-self: center;
 }
