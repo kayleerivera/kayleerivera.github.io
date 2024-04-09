@@ -18,15 +18,33 @@
 <body>
   <h1>Restaurants on the Rail Trail</h1>
 
-  <!--dropdown-->
-  <div id="station-filter">
-    <calcite-label>
-      Station:
-      <calcite-combobox placeholder="Select a field" selection-mode="single">
-        <!-- dynamically populated-->
-      </calcite-combobox>
-    </calcite-label>
+  <!-- filters -->
+  <div id="filters">
+    <!-- station dropdown-->
+    <div id="station-filter">
+      <calcite-label>
+        Station:
+        <calcite-combobox placeholder="Select a field" selection-mode="single">
+          <!-- dynamically populated-->
+        </calcite-combobox>
+      </calcite-label>
+    </div>
 
+    <!-- rating fitler-->
+    <div id="rating-filter">
+      <calcite-label>
+        Rating:
+        <calcite-rating></calcite-rating>
+      </calcite-label>
+    </div>
+
+    <!-- distance filter-->
+    <div id="distance-filter">
+      <calcite-label>
+        Miles from station:
+        <calcite-slider value="1" label-handles label-ticks max-label="3" min-label="0" ticks="12"></calcite-slider>
+      </calcite-label>
+    </div>
   </div>
 
   <!-- tiles -->

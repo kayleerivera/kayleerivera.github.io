@@ -54,32 +54,32 @@ function getStations() {
       //create cards
       let cardDiv = ''
       if (body.features.length > 0) {
-      body.features.forEach((feature) => {
-        //construct some HTML!
-        cardDiv += `<calcite-card>
+        body.features.forEach((feature) => {
+          //construct some HTML!
+          cardDiv += `<calcite-card>
       <span slot="title">${feature.attributes.name.trim()}</span>
       <span slot="subtitle">${feature.attributes.address.trim()}</span>
       <div slot="footer-start">
         <calcite-button round icon-start="pin-tear" href="https://www.google.com/maps/search/?api=1&query=${feature.attributes.name.trim()} Light Rail Station Charlotte NC">View Map</calcite-button>
       </div>
     </calcite-card>`
-      });
-    document.querySelector("#result-cards").innerHTML = cardDiv
-      } 
+        });
+        document.querySelector("#result-cards").innerHTML = cardDiv
+      }
       document.querySelector("#result-cards").textContent = "No Stations to Display"
-    //create dropdown
+      //create dropdown
       let dropdownDiv = ''
       if (body.features.length > 0) {
-      body.features.forEach((feature) => {
-        //construct some HTML!
-        dropdownDiv += `<calcite-combobox-item value="${feature.attributes.name.trim()}" text-label="${feature.attributes.name.trim()}"></calcite-combobox-item>`
-      });
-    document.querySelector("calcite-combobox").innerHTML = dropdownDiv
-      } 
+        body.features.forEach((feature) => {
+          //construct some HTML!
+          dropdownDiv += `<calcite-combobox-item value="${feature.attributes.name.trim()}" text-label="${feature.attributes.name.trim()}"></calcite-combobox-item>`
+        });
+        document.querySelector("calcite-combobox").innerHTML = dropdownDiv
+      }
     })
-  .catch(error => {
-    console.error(error);
-  });
+    .catch(error => {
+      console.error(error);
+    });
 }
 
 getStations();
