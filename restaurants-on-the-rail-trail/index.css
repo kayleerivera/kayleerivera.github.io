@@ -9,12 +9,11 @@ h1{
   justify-content: flex-start;
   padding-bottom: 50px;
   padding-left: 10%;
+  align-self: center;
 }
 
 .filter{
-  padding-right: 2.5%;
-  display: flex;
-  justify-content: center;
+  padding-right: 10px;
   width: 25%;
 }
 
