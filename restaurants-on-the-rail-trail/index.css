@@ -15,6 +15,10 @@ h1{
   width: auto;
 }
 
+#distance-filter{
+  width: 200px;
+}
+
 #result-cards{
   display: flex;
   flex-wrap: wrap;
