@@ -20,15 +20,19 @@
 
   <!--dropdown-->
   <div id="station-filter">
-  <calcite-combobox placeholder="Select a field" selection-mode="single">
-    <calcite-combobox-item value="Carson Station" text-label="Carson Station"></calcite-combobox-item>
-    <calcite-combobox-item value="East/West Station" text-label="East/West Station"></calcite-combobox-item>
-  </calcite-combobox>
+    <calcite-label>
+      Station:
+      <calcite-combobox placeholder="Select a field" selection-mode="single">
+        <calcite-combobox-item value="Carson Station" text-label="Carson Station"></calcite-combobox-item>
+        <calcite-combobox-item value="East/West Station" text-label="East/West Station"></calcite-combobox-item>
+      </calcite-combobox>
+    </calcite-label>
+
   </div>
 
   <!-- tiles -->
   <div id="result-cards">
-   <!-- dynamically popuplated -->
+    <!-- dynamically popuplated -->
   </div>
-<script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
