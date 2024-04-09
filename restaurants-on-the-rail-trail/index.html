@@ -21,7 +21,7 @@
   <!-- filters -->
   <div id="filters">
     <!-- station dropdown-->
-    <div id="station-filter">
+    <div id="station-filter" class="filter">
       <calcite-label>
         Station:
         <calcite-combobox placeholder="Select a field" selection-mode="single">
@@ -42,7 +42,8 @@
     <div id="distance-filter" class="filter">
       <calcite-label>
         Miles from station:
-        <calcite-slider value="1" label-handles label-ticks max-label="3" min-label="0" ticks="12"></calcite-slider>
+        <calcite-slider value="30" label-handles label-ticks max="3" min="0" page-step="1" snap step="0.25" ticks="1">
+        </calcite-slider>
       </calcite-label>
     </div>
   </div>
