@@ -70,7 +70,8 @@ function getStations() {
       //create dropdown
       const dropdownDiv = document.querySelector("calcite-combobox");
       if (body.features.length > 0) {
-        body.features.sort((a,b), a.attribute.name - b.attribute.name).forEach((feature) => {
+        console.log(body.features.sort((a,b), a.attributes.name - b.attributes.name))
+        body.features.forEach((feature) => {
           //construct some HTML!
           dropdownDiv.insertAdjacentHTML("beforeend", `<calcite-combobox-item value="${feature.attributes.name.trim()}" text-label="${feature.attributes.name.trim()}"></calcite-combobox-item>`);
         });
