@@ -68,14 +68,13 @@ function getStations() {
       }
       document.querySelector("#result-cards").textContent = "No Stations to Display"
       //create dropdown
-      let dropdownDiv = ''
+      const dropdownDiv = document.querySelector("calcite-combobox");
       if (body.features.length > 0) {
         body.features.forEach((feature) => {
           //construct some HTML!
-          dropdownDiv += `<calcite-combobox-item value="${feature.attributes.name.trim()}" text-label="${feature.attributes.name.trim()}"></calcite-combobox-item>`
+          dropdownDiv.insertAdjacentHTML("beforeend", `<calcite-combobox-item value="${feature.attributes.name.trim()}" text-label="${feature.attributes.name.trim()}"></calcite-combobox-item>`);
         });
-        document.querySelector("calcite-combobox").innerHTML = dropdownDiv
-      }
+      } throw new Error("No stations found.")
     })
     .catch(error => {
       console.error(error);
