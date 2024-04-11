@@ -19,16 +19,16 @@ stationFilter.addEventListener("calciteComboboxChange", event => {
   const selection = document.querySelector(`#station-filter [value="${event.target.value}"]`)
   filters.stationx = selection?.dataset.xCoord ?? ""
   filters.stationy = selection?.dataset.yCoord ?? ""
-  displayFilterSelections();
+  displayFilterSelections(filters.distance,filters.station,filters.rating);
 });
 
 ratingFilter.addEventListener("calciteRatingChange", event => {
   filters.rating = event.target.value
-  displayFilterSelections();
+  displayFilterSelections(filters.distance,filters.station,filters.rating);
 });
 
 distanceFilter.addEventListener("calciteSliderChange", event => {
   filters.distance = event.target.value
-  displayFilterSelections();
+  displayFilterSelections(filters.distance,filters.station,filters.rating);
 });
 

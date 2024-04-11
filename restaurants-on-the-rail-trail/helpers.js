@@ -86,6 +86,6 @@ export function getStations() {
         });
 }
 
-export function displayFilterSelections() {
-    console.log(`You're looking for restaurants within ${filters.distance} miles of ${filters.station} with at least a ${filters.rating} star rating.`)
+export function displayFilterSelections(distance,station,rating) {
+    console.log(`You're looking for restaurants within ${distance} miles of ${station} with at least a ${rating} star rating.`)
 }
