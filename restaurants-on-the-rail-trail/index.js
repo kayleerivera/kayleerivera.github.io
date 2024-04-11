@@ -1,4 +1,4 @@
-import("./helpers");
+import * as helpers from "./helpers.js"
 
 getStations();
 
