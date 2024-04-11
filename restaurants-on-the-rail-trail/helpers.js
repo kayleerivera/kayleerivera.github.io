@@ -24,6 +24,20 @@
             return result.json();
         })
         .then(function (body) {
+            const cardsDiv = document.querySelector("#result-cards");
+            if (body.results.length > 0){
+                body.results.forEach(result => {
+                    cardsDiv.insertAdjacentHTML("beforeend",`<calcite-card>
+                    <span slot="title">${result.name}</span>
+                    <span slot="subtitle">${result.location.distance / 1609.34}</span>
+                    <div slot="footer-start">
+                      <calcite-button round icon-start="pin-tear" href="https://www.google.com/maps/search/?api=1&query=${result.name} Charlotte NC">View Map</calcite-button>
+                    </div>
+                  </calcite-card>`)
+                })
+            } else {
+                cardsDiv.insertAdjacentHTML("beforeend",`<p>No Results Found</p>`)
+            }
             console.log(body.results);
         });
 }
