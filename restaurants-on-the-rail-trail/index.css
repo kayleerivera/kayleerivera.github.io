@@ -6,9 +6,10 @@ h1{
 
 #filters{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   padding-bottom: 50px;
   align-self: center;
+  background-color: navy;
 }
 
 .filter{

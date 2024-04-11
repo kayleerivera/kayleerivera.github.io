@@ -5,7 +5,7 @@
         x,
         y,
         radius: radiusMiles * 1609.34,
-        //categoryIds: [12000],
+        categoryIds: ["13000"],
         f: "json",
         token:
             "AAPKa4a834dd14fe464dac0765c135502466bJTidcQFYUmhVZZBjlyvw3VQ7MvAZDnzGuRjHP2Z3u1KeLbCih162STl535C4mpc"
@@ -52,23 +52,6 @@ export function getStations() {
             return result.json();
         })
         .then(function (body) {
-            //create cards
-            let cardDiv = "";
-            if (body.features.length > 0) {
-                body.features.forEach((feature) => {
-                    //construct some HTML!
-                    cardDiv += `<calcite-card>
-        <span slot="title">${feature.attributes.name.trim()}</span>
-        <span slot="subtitle">${feature.attributes.address.trim()}</span>
-        <div slot="footer-start">
-          <calcite-button round icon-start="pin-tear" href="https://www.google.com/maps/search/?api=1&query=${feature.attributes.name.trim()} Light Rail Station Charlotte NC">View Map</calcite-button>
-        </div>
-      </calcite-card>`;
-                });
-                document.querySelector("#result-cards").innerHTML = cardDiv;
-            }
-            document.querySelector("#result-cards").textContent =
-                "No Stations to Display";
             //create dropdown
             const dropdownDiv = document.querySelector("calcite-combobox");
             if (body.features.length > 0) {
