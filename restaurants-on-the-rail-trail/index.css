@@ -7,7 +7,7 @@ h1{
 #filters{
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
+  padding: 50px;
   align-self: center;
   background-color: lightblue;
   width: 25%;
