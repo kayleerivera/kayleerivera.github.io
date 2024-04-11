@@ -86,6 +86,10 @@ function getStations() {
     });
 }
 
+function displayFilterSelections() {
+  console.log(`You're looking for restaurants within ${filters.distance} miles of ${filters.station} with at least a ${filters.rating} star rating.`)
+}
+
 getStations();
 
 const stationFilter = document.querySelector("#station-filter");
@@ -105,14 +109,16 @@ stationFilter.addEventListener("calciteComboboxChange", event => {
   const selection = document.querySelector(`#station-filter [value="${event.target.value}"]`)
   filters.stationx = selection?.dataset.xCoord ?? ""
   filters.stationy = selection?.dataset.yCoord ?? ""
-  console.log(filters)
+  displayFilterSelections();
 });
 
 ratingFilter.addEventListener("calciteRatingChange", event => {
   filters.rating = event.target.value
+  displayFilterSelections();
 });
 
 distanceFilter.addEventListener("calciteSliderChange", event => {
   filters.distance = event.target.value
+  displayFilterSelections();
 });
 
