@@ -1,4 +1,4 @@
-import {getStations, displayFilterSelections} from "./helpers.js"
+import {nearbyRestaurants, getStations, displayFilterSelections} from "./helpers.js"
 
 getStations();
 
@@ -20,6 +20,7 @@ stationFilter.addEventListener("calciteComboboxChange", event => {
   filters.stationx = selection?.dataset.xCoord ?? ""
   filters.stationy = selection?.dataset.yCoord ?? ""
   displayFilterSelections(filters.distance,filters.station,filters.rating);
+  nearbyRestaurants(filters.stationy,filters.stationx,filters.distance)
 });
 
 ratingFilter.addEventListener("calciteRatingChange", event => {
