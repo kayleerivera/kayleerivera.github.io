@@ -5,7 +5,7 @@
         x,
         y,
         radius: radiusMiles * 1609.34,
-        //categoryIds: ["13000"],
+        categoryIds: ["13000"],
         f: "json",
         token:
             "AAPKa4a834dd14fe464dac0765c135502466bJTidcQFYUmhVZZBjlyvw3VQ7MvAZDnzGuRjHP2Z3u1KeLbCih162STl535C4mpc"
