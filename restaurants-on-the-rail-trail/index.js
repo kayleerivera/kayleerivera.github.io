@@ -1,5 +1,4 @@
-import getStations from "./helpers.js";
-import displayFilterSelections from "./helpers.js";
+import("./helpers");
 
 getStations();
 
