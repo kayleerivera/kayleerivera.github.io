@@ -29,7 +29,7 @@
                 body.results.forEach(result => {
                     cardsDiv.insertAdjacentHTML("beforeend",`<calcite-card>
                     <span slot="title">${result.name}</span>
-                    <span slot="subtitle">${result.location.distance / 1609.34}</span>
+                    <span slot="subtitle">${Number.parseInt(result.location.distance,10) / 1609.34}</span>
                     <div slot="footer-start">
                       <calcite-button round icon-start="pin-tear" href="https://www.google.com/maps/search/?api=1&query=${result.name} Charlotte NC">View Map</calcite-button>
                     </div>
