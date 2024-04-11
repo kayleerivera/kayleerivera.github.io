@@ -35,6 +35,7 @@ function getStations() {
   const stationParams = {
     where: "1=1",
     outFields: "*",
+    orderByFields: "trim(leading ' ' from name) ASC",
     outSR: "4326",
     f: "json"
   };
@@ -52,7 +53,7 @@ function getStations() {
     })
     .then(function (body) {
       //create cards
-      let cardDiv = ''
+      let cardDiv = "";
       if (body.features.length > 0) {
         body.features.forEach((feature) => {
           //construct some HTML!
@@ -62,24 +63,56 @@ function getStations() {
       <div slot="footer-start">
         <calcite-button round icon-start="pin-tear" href="https://www.google.com/maps/search/?api=1&query=${feature.attributes.name.trim()} Light Rail Station Charlotte NC">View Map</calcite-button>
       </div>
-    </calcite-card>`
+    </calcite-card>`;
         });
-        document.querySelector("#result-cards").innerHTML = cardDiv
+        document.querySelector("#result-cards").innerHTML = cardDiv;
       }
-      document.querySelector("#result-cards").textContent = "No Stations to Display"
+      document.querySelector("#result-cards").textContent =
+        "No Stations to Display";
       //create dropdown
       const dropdownDiv = document.querySelector("calcite-combobox");
       if (body.features.length > 0) {
-        console.log(body.features.sort((a,b), a.attributes.name - b.attributes.name))
         body.features.forEach((feature) => {
           //construct some HTML!
-          dropdownDiv.insertAdjacentHTML("beforeend", `<calcite-combobox-item value="${feature.attributes.name.trim()}" text-label="${feature.attributes.name.trim()}"></calcite-combobox-item>`);
+          dropdownDiv.insertAdjacentHTML(
+            "beforeend",
+            `<calcite-combobox-item value="${feature.attributes.name.trim()}" text-label="${feature.attributes.name.trim()}" data-x-coord="${feature.geometry.x}" data-y-coord="${feature.geometry.y}"></calcite-combobox-item>`
+          );
         });
-      } throw new Error("No stations found.")
+      }
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
 }
 
 getStations();
+
+const stationFilter = document.querySelector("#station-filter");
+const ratingFilter = document.querySelector("#rating-filter");
+const distanceFilter = document.querySelector("#distance-filter");
+
+const filters = {
+  station: "",
+  stationx: "",
+  stationy: "",
+  rating: 0,
+  distance: 1
+};
+
+stationFilter.addEventListener("calciteComboboxChange", event => {
+  filters.station = event.target.value
+  const selection = document.querySelector(`#station-filter [value="${event.target.value}"]`)
+  filters.stationx = selection?.dataset.xCoord ?? ""
+  filters.stationy = selection?.dataset.yCoord ?? ""
+  console.log(filters)
+});
+
+ratingFilter.addEventListener("calciteRatingChange", event => {
+  filters.rating = event.target.value
+});
+
+distanceFilter.addEventListener("calciteSliderChange", event => {
+  filters.distance = event.target.value
+});
+
