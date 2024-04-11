@@ -1,4 +1,4 @@
-function nearbyRestaurants(y, x, radiusMiles) {
+ export function nearbyRestaurants(y, x, radiusMiles) {
     const nearPoint =
         "https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/places/near-point";
     const queryParams = {
@@ -28,7 +28,7 @@ function nearbyRestaurants(y, x, radiusMiles) {
         });
 }
 
-function getStations() {
+export function getStations() {
     const stations = [];
     const stationsURL =
         "https://meckgis.mecklenburgcountync.gov/server/rest/services/CATSLynxBlueLineStations/FeatureServer/0/query";
@@ -86,11 +86,6 @@ function getStations() {
         });
 }
 
-function displayFilterSelections() {
+export function displayFilterSelections() {
     console.log(`You're looking for restaurants within ${filters.distance} miles of ${filters.station} with at least a ${filters.rating} star rating.`)
 }
-
-export{
-    getStations,
-    displayFilterSelections
-};
