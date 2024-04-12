@@ -8,6 +8,7 @@ h1{
   justify-content: flex-start;
   letter-spacing: -1%;
   color: #FBFAFA;
+  height: 15vh;
 }
 
 #main{
@@ -22,7 +23,7 @@ h1{
   background-color: #FBFAFA;
   color: #999999;
   width: 25%;
-  min-height: 100vh;
+  min-height: 85vh;
   box-shadow: 5px 5px 0px #999999;
 }
 
