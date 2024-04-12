@@ -11,12 +11,13 @@ h1{
   justify-content: flex-start;
   letter-spacing: -1%;
   color: #FBFAFA;
+  flex: auto;
 }
 
 #main{
   display: flex;
   align-items: stretch;
-  height: 100%;
+  flex: 1;
 }
 
 #filters{
@@ -26,6 +27,8 @@ h1{
   background-color: #FBFAFA;
   color: #999999;
   width: 25%;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
   box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 }
 
