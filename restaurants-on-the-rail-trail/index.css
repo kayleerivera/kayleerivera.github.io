@@ -4,6 +4,10 @@ h1{
   letter-spacing: -1%;
 }
 
+#main{
+  display: flex;
+}
+
 #filters{
   display: flex;
   flex-direction: column;
@@ -11,6 +15,7 @@ h1{
   align-self: center;
   background-color: lightgray;
   width: 25%;
+  height: 100%;
 }
 
 .filter{
