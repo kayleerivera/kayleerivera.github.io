@@ -1,6 +1,8 @@
 body{
   background-color: #6a3d5a;
   color:#FBFAFA;
+  display: flex;
+  flex-flow: column;
   height: 100%;
 }
 
@@ -18,13 +20,14 @@ h1{
 
 #filters{
   display: flex;
+  flex: 1;
   flex-direction: column;
   padding: 50px;
   background-color: #FBFAFA;
   color: #999999;
   width: 25%;
   height: 100%;
-  box-shadow: 5px 5px 0px #999999;
+  box-shadow: 5px 5px 5px #999999;
 }
 
 .filter{
