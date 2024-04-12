@@ -7,7 +7,7 @@ body{
   color:#FBFAFA;
   display: flex;
   flex-flow: column;
-  flex: 1;
+  height: 100%;
 }
 
 h1{
