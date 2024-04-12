@@ -7,7 +7,7 @@ body{
   color:#FBFAFA;
   display: flex;
   flex-flow: column;
-  height: 100%;
+  flex: 1;
 }
 
 h1{
@@ -15,7 +15,6 @@ h1{
   justify-content: flex-start;
   letter-spacing: -1%;
   color: #FBFAFA;
-  flex: auto;
 }
 
 #main{
