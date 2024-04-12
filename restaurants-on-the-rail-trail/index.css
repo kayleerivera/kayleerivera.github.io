@@ -15,12 +15,12 @@ h1{
 
 #main{
   display: flex;
+  flex: 1;
   align-items: flex-start;
 }
 
 #filters{
   display: flex;
-  flex: 1 1 25%;
   flex-direction: column;
   padding: 50px;
   background-color: #FBFAFA;
@@ -39,7 +39,6 @@ h1{
 
 #result-cards{
   display: flex;
-  flex: 3 3 75%;
   flex-wrap: wrap;
   justify-content: center;
 }
