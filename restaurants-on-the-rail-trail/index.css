@@ -20,13 +20,12 @@ h1{
 
 #filters{
   display: flex;
-  flex: 1;
+  flex: 1 1 25%;
   flex-direction: column;
   padding: 50px;
   background-color: #FBFAFA;
   color: #999999;
   width: 25%;
-  height: 100%;
   box-shadow: 5px 5px 5px #999999;
 }
 
@@ -40,6 +39,7 @@ h1{
 
 #result-cards{
   display: flex;
+  flex: 3 3 75%;
   flex-wrap: wrap;
   justify-content: center;
 }
