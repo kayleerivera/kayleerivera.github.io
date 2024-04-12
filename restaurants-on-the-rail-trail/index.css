@@ -15,8 +15,8 @@ h1{
 
 #main{
   display: flex;
-  align-items: flex-start;
-  flex: 1;
+  align-items: stretch;
+  height: 100%;
 }
 
 #filters{
