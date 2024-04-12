@@ -16,13 +16,12 @@ h1{
 #main{
   display: flex;
   align-items: flex-start;
-  height: 100%;
+  flex: 0 0 100%;
 }
 
 #filters{
   display: flex;
   flex-direction: column;
-  flex: 0 1 100%;
   padding: 50px;
   background-color: #FBFAFA;
   color: #999999;
