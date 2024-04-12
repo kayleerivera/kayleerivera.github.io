@@ -1,6 +1,7 @@
 body{
   background-color: #6a3d5a;
   color:#FBFAFA;
+  height: 100%;
 }
 
 h1{
@@ -8,7 +9,6 @@ h1{
   justify-content: flex-start;
   letter-spacing: -1%;
   color: #FBFAFA;
-  height: 15vh;
 }
 
 #main{
@@ -23,7 +23,7 @@ h1{
   background-color: #FBFAFA;
   color: #999999;
   width: 25%;
-  min-height: 85vh;
+  height: 100%;
   box-shadow: 5px 5px 0px #999999;
 }
 
