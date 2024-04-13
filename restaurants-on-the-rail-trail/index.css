@@ -59,9 +59,9 @@ h1{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10px 10px;
 }
 
 calcite-card{
-  padding:20px;
   width: 20%;
 }
