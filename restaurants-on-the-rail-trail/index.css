@@ -67,6 +67,7 @@ h1{
 }
 
 calcite-card{
-  width: 20%;
   height: 20%;
+  --calcite-card-corner-radius: var(--calcite-corner-radius-round);
+  --calcite-card-shadow: rgba(0,0,0,.2)
 }
