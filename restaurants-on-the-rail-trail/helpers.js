@@ -28,6 +28,7 @@
             cardsDiv.textContent = ""
             if (body.results.length > 0){
                 body.results.forEach(result => {
+                    console.log(result);
                     cardsDiv.insertAdjacentHTML("beforeend",`<calcite-card>
                     <span slot="title">${result.name}</span>
                     <span slot="subtitle">${result.location.distance}</span>
