@@ -6,7 +6,9 @@
   --calcite-color-status-success: #72aa69 !important;
   --calcite-color-status-warning: #f09a31 !important;
   --calcite-color-status-danger: #f44336 !important;
-  --calcite-card-corner-radius: 6px !important;
+  --calcite-corner-radius-round: 6px !important;
+  --calcite-card-corner-radius: var(--calcite-corner-radius-round) !important;
+  --calcite-card-shadow: 5px 5px 5px rgba(0,0,0,.2) !important;
 }
 
 html{
@@ -60,6 +62,7 @@ h1{
   flex-wrap: wrap;
   flex: 1 16%;
   justify-content: center;
+  align-items: flex-start;
   gap: 20px 20px;
 }
 
