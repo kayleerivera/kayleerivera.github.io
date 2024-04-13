@@ -1,10 +1,12 @@
 :root{
   --calcite-color-brand: #cc9da4 !important;
+  --calcite-color-brand-hover: #6a3d59!important;
   --calcite-color-background: #FBFAFA !important;
   --calcite-color-status-info: #6a3d59 !important;
   --calcite-color-status-success: #72aa69 !important;
   --calcite-color-status-warning: #f09a31 !important;
   --calcite-color-status-danger: #f44336 !important;
+  --calcite-card-corner-radius: 6px !important;
 }
 
 html{
