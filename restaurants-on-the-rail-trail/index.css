@@ -60,10 +60,10 @@ h1{
   flex-wrap: wrap;
   flex: 1 16%;
   justify-content: center;
-  align-items: stretch;
   gap: 20px 20px;
 }
 
 calcite-card{
   width: 20%;
+  height: 20%;
 }
