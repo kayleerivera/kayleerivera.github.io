@@ -62,4 +62,6 @@ h1{
 calcite-card{
   padding:20px;
   width: 20%;
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 }
