@@ -39,7 +39,6 @@ h1{
 #filters{
   display: flex;
   flex-direction: column;
-  position: absolute;
   padding: 50px;
   background-color: #FBFAFA;
   color: #999999;
@@ -61,6 +60,7 @@ h1{
 #result-cards{
   display: flex;
   flex-wrap: wrap;
+  width: 75%;
   flex: 1 16%;
   justify-content: center;
   align-items: flex-start;
