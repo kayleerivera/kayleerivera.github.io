@@ -87,3 +87,11 @@ export function getStations() {
 export function displayFilterSelections(distance,station,rating) {
     console.log(`You're looking for restaurants within ${distance} miles of ${station} with at least a ${rating} star rating.`)
 }
+
+export function selectStationMessage() {
+    const cardsDiv = document.querySelector("#result-cards");
+    cardsDiv.insertAdjacentHTML("beforeend",`<calcite-notice open kind="danger" icon>
+    <div slot="title">Error</div>
+    <div slot="message">Please select a station to see results</div>
+</calcite-notice>`)
+}

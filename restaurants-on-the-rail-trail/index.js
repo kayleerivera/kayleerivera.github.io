@@ -1,4 +1,4 @@
-import {nearbyRestaurants, getStations, displayFilterSelections} from "./helpers.js"
+import {nearbyRestaurants, getStations, displayFilterSelections,selectStationMessage} from "./helpers.js"
 
 getStations();
 
@@ -20,7 +20,7 @@ stationFilter.addEventListener("calciteComboboxChange", event => {
   filters.stationx = selection?.dataset.xCoord ?? ""
   filters.stationy = selection?.dataset.yCoord ?? ""
   displayFilterSelections(filters.distance,filters.station,filters.rating);
-  nearbyRestaurants(filters.stationy,filters.stationx,filters.distance)
+  nearbyRestaurants(filters.stationy,filters.stationx,filters.distance);
 });
 
 ratingFilter.addEventListener("calciteRatingChange", event => {
@@ -31,5 +31,10 @@ ratingFilter.addEventListener("calciteRatingChange", event => {
 distanceFilter.addEventListener("calciteSliderChange", event => {
   filters.distance = event.target.value
   displayFilterSelections(filters.distance,filters.station,filters.rating);
+  if (filters.station) {
+    nearbyRestaurants(filters.stationy,filters.stationx,filters.distance);
+  } else {
+    selectStationMessage();
+  }
 });
 
