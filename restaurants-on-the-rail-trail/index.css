@@ -1,6 +1,6 @@
 :root{
-  --calcite-color-brand: #6a3d5a;
-  --calcite-color-background: #FBFAFA;
+  --calcite-color-brand: #6a3d5a !important;
+  --calcite-color-background: #FBFAFA !important;
 }
 
 html{
