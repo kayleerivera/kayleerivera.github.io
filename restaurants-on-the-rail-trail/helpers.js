@@ -1,4 +1,4 @@
- export function nearbyRestaurants(y, x, radiusMiles) {
+export function nearbyRestaurants(y, x, radiusMiles) {
     const nearPoint =
         "https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/places/near-point";
     const queryParams = {
@@ -24,11 +24,15 @@
             return result.json();
         })
         .then(function (body) {
+            const noticeDiv = document.querySelector("calcite-notice");
+            if (noticeDiv.classList.contains("show")) {
+                noticeDiv.classList.replace("show", "hide")
+            };
             const cardsDiv = document.querySelector("#result-cards");
             cardsDiv.textContent = ""
-            if (body.results.length > 0){
+            if (body.results.length > 0) {
                 body.results.forEach(result => {
-                    cardsDiv.insertAdjacentHTML("beforeend",`<calcite-card>
+                    cardsDiv.insertAdjacentHTML("beforeend", `<calcite-card>
                     <span slot="title">${result.name}</span>
                     <span slot="subtitle">${(result.distance / 1609.34).toFixed(2)} miles</span>
                     <div slot="footer-start">
@@ -37,7 +41,7 @@
                   </calcite-card>`)
                 })
             } else {
-                cardsDiv.insertAdjacentHTML("beforeend",`<p>No Results Found</p>`)
+                cardsDiv.insertAdjacentHTML("beforeend", `<p>No Results Found</p>`)
             }
             console.log(body.results);
         });
@@ -84,14 +88,13 @@ export function getStations() {
         });
 }
 
-export function displayFilterSelections(distance,station,rating) {
+export function displayFilterSelections(distance, station, rating) {
     console.log(`You're looking for restaurants within ${distance} miles of ${station} with at least a ${rating} star rating.`)
 }
 
 export function selectStationMessage() {
-    const cardsDiv = document.querySelector("#result-cards");
-    cardsDiv.insertAdjacentHTML("beforeend",`<calcite-notice open kind="danger" icon>
-    <div slot="title">Error</div>
-    <div slot="message">Please select a station to see results</div>
-</calcite-notice>`)
+    const noticeDiv = document.querySelector("calcite-notice");
+    if (noticeDiv.classList.contains("hide")) {
+        noticeDiv.classList.replace("hide", "show")
+    };
 }

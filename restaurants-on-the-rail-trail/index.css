@@ -75,3 +75,13 @@ calcite-card{
   --calcite-card-corner-radius: var(--calcite-corner-radius-round);
   --calcite-card-shadow: var(--calcite-shadow-md);
 }
+
+calcite-notice.hide{
+  display: none;
+  transition: 1s;
+}
+
+calcite-notice.show{
+  display: initial;
+  transition: 1s;
+}
