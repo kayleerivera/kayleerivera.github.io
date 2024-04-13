@@ -8,7 +8,7 @@
   --calcite-color-status-danger: #f44336 !important;
   --calcite-corner-radius-round: 6px !important;
   --calcite-card-corner-radius: var(--calcite-corner-radius-round) !important;
-  --calcite-card-shadow: 5px 5px 5px rgba(0,0,0,.2) !important;
+  --calcite-card-shadow: var(--calcite-shadow-md) !important;
 }
 
 html{
@@ -45,7 +45,7 @@ h1{
   width: 25%;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+  box-shadow: var(--calcite-shadow-md);
   transition: 1s;
 }
 
