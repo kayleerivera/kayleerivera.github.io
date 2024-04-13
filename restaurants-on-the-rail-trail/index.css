@@ -70,6 +70,7 @@ h1{
 
 calcite-card{
   height: 20%;
+  min-width: 20%;
   flex: 1;
   --calcite-card-corner-radius: var(--calcite-corner-radius-round);
   --calcite-card-shadow: rgba(0,0,0,.2)
