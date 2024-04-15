@@ -1,3 +1,13 @@
+/*
+Color Palette
+Light shades: #FBFAFA;
+Light accent: #CAA5BF;
+Main brand: #CC9DA4;
+Dark accent: #9E83A4;
+Dark shades: #6A3D5A;
+Gray: #999999;
+*/
+
 :root{
   --calcite-color-brand: #cc9da4 !important;
   --calcite-color-brand-hover: #6a3d59!important;
