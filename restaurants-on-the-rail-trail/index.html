@@ -18,19 +18,19 @@
 <body>
   <h1>Restaurants on the Rail Trail</h1>
   <div id="main">
-  <!-- filters -->
-  <div id="filters">
-    <!-- station dropdown-->
-    <div id="station-filter" class="filter">
-      <calcite-label>
-        Station:
-        <calcite-combobox placeholder="Select a field" selection-mode="single">
-          <!-- dynamically populated-->
-        </calcite-combobox>
-      </calcite-label>
-    </div>
+    <!-- filters -->
+    <div id="filters">
+      <!-- station dropdown-->
+      <div id="station-filter" class="filter">
+        <calcite-label>
+          Station:
+          <calcite-combobox placeholder="Select a field" selection-mode="single">
+            <!-- dynamically populated-->
+          </calcite-combobox>
+        </calcite-label>
+      </div>
 
-    <!-- rating filter
+      <!-- rating filter
     <div id="rating-filter" class="filter">
       <calcite-label>
         Rating:
@@ -38,34 +38,36 @@
       </calcite-label>
     </div> -->
 
-    <!-- distance filter-->
-    <div id="distance-filter" class="filter">
-      <calcite-label>
-        Miles from station:
-        <calcite-slider value=".5" label-handles label-ticks max="2" min="0" page-step=".5" snap step="0.25" ticks="1">
-        </calcite-slider>
-      </calcite-label>
+      <!-- distance filter-->
+      <div id="distance-filter" class="filter">
+        <calcite-label>
+          Miles from station:
+          <calcite-slider value=".5" label-handles label-ticks max="2" min="0" page-step=".5" snap step="0.25"
+            ticks="1">
+          </calcite-slider>
+        </calcite-label>
+      </div>
+
+
+      <!-- category filter -->
+      <div id="category-filter" class="filter">
+        <calcite-label>
+          Categories:
+          <calcite-combobox placeholder="Select a field" selection-mode="multiple">
+            <!-- dynamically populated-->
+          </calcite-combobox>
+        </calcite-label>
+      </div>
+    </div>
+
+    <!-- tiles -->
+    <div id="result-cards">
+      <calcite-notice open kind="danger" icon .hide>
+        <div slot="title">Error</div>
+        <div slot="message">Please select a station to see results</div>
+      </calcite-notice>
+      <!-- dynamically popuplated -->
     </div>
   </div>
-
-  <!-- category filter -->
-  <div id="category-filter" class="filter">
-    <calcite-label>
-      Categories:
-      <calcite-combobox placeholder="Select a field" selection-mode="multiple">
-        <!-- dynamically populated-->
-      </calcite-combobox>
-    </calcite-label>
-  </div>
-
-  <!-- tiles -->
-  <div id="result-cards">
-    <calcite-notice open kind="danger" icon .hide>
-      <div slot="title">Error</div>
-      <div slot="message">Please select a station to see results</div>
-  </calcite-notice>
-    <!-- dynamically popuplated -->
-  </div>
-</div>
   <script type="module" src="index.js"></script>
 </body>
