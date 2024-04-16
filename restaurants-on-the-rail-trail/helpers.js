@@ -72,7 +72,7 @@ export function getStations() {
         })
         .then(function (body) {
             //create dropdown
-            const dropdownDiv = document.querySelector("calcite-combobox");
+            const dropdownDiv = document.querySelector("#station-filter calcite-combobox");
             if (body.features.length > 0) {
                 body.features.forEach((feature) => {
                     //construct some HTML!
@@ -86,6 +86,32 @@ export function getStations() {
         .catch((error) => {
             console.error(error);
         });
+}
+
+export function getCategories() {
+    fetch("https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/categories?filter=restaurant&f=json&token=AAPKa4a834dd14fe464dac0765c135502466bJTidcQFYUmhVZZBjlyvw3VQ7MvAZDnzGuRjHP2Z3u1KeLbCih162STl535C4mpc", {
+        method: "GET",
+        headers: { Accept: "application/json" }
+    })
+    .then(function (result) {
+        console.log(result);
+        return result.json();
+    })
+    .then(function (body) {
+        //populate combobox
+        const categoryDropdown = document.querySelector("#category-filter calcite-combobox")
+        if (body.categories.length > 0) {
+            body.categories.forEach((category) => {
+                category.insertAdjacentHTML(
+                    "beforeend",
+                    `<calcite-combobox-item value="${category.fullLabel[length-1]}" text-label="${category.fullLabel[length-1]}"></calcite-combobox-item>`
+                )
+            })
+        }
+    })
+    .catch((error) => {
+        console.error(error);
+    })
 }
 
 export function displayFilterSelections(distance, station, rating) {
