@@ -68,10 +68,11 @@ h1{
 }
 
 #result-cards{
+  padding: 1em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto-fill, 120px);
-  row-gap: .5em;
+  row-gap: 1em;
   column-gap: 1em;
 }
 
