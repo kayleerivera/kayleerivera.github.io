@@ -37,6 +37,17 @@ body {
   font-style: normal;
 }
 
+@keyframes header {
+  from {
+    color: #6a3d5a;
+    text-shadow: 1px 1px 2px #6a3d5a;
+  }
+  to {
+    color: #fbfafa;
+    text-shadow: 1px 1px 2px hsl(321, 27%, 15%);
+  }
+}
+
 h1 {
   font-family: "Yeseva One", serif;
   font-weight: 400;
@@ -47,6 +58,8 @@ h1 {
   /* letter-spacing: -1%; */
   color: #fbfafa;
   text-shadow: 1px 1px 2px hsl(321, 27%, 15%);
+  animation-name: header;
+  animation-duration: 3s;
 }
 
 #main {
