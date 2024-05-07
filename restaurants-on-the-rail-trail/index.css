@@ -34,10 +34,10 @@ body {
 }
 
 h1 {
-  font-family: "Yeseva One", serif;
+  font-family: "Berkshire Swash", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: x-large;
+  font-size: 40px;
   display: flex;
   justify-content: flex-start;
   letter-spacing: -1%;
