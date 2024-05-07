@@ -42,6 +42,7 @@ h1 {
   justify-content: flex-start;
   letter-spacing: -1%;
   color: #fbfafa;
+  text-shadow: 1px 1px 2px #6a3d5a;
 }
 
 #main {
