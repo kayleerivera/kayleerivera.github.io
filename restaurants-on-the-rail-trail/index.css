@@ -8,10 +8,10 @@ Dark shades: #6A3D5A;
 Gray: #999999;
 */
 
-:root{
+:root {
   --calcite-color-brand: #cc9da4 !important;
-  --calcite-color-brand-hover: #6a3d59!important;
-  --calcite-color-background: #FBFAFA !important;
+  --calcite-color-brand-hover: #6a3d59 !important;
+  --calcite-color-background: #fbfafa !important;
   --calcite-color-status-info: #6a3d59 !important;
   --calcite-color-status-success: #72aa69 !important;
   --calcite-color-status-warning: #f09a31 !important;
@@ -21,39 +21,40 @@ Gray: #999999;
   --calcite-card-shadow: var(--calcite-shadow-md) !important;
 }
 
-html{
+html {
   height: 100%;
 }
 
-body{
+body {
   background-color: #6a3d5a;
-  color:#FBFAFA;
+  color: #fbfafa;
   display: flex;
   flex-flow: column;
   height: 100%;
 }
 
-h1{
+h1 {
   font-family: "Yeseva One", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: x-large;
   display: flex;
   justify-content: flex-start;
   letter-spacing: -1%;
-  color: #FBFAFA;
+  color: #fbfafa;
 }
 
-#main{
+#main {
   display: flex;
   align-items: stretch;
   flex: 1;
 }
 
-#filters{
+#filters {
   display: flex;
   flex-direction: column;
   padding: 50px;
-  background-color: #FBFAFA;
+  background-color: #fbfafa;
   color: #999999;
   width: 25%;
   border-top-right-radius: 6px;
@@ -62,15 +63,15 @@ h1{
   transition: 1s;
 }
 
-.filter{
+.filter {
   width: auto;
 }
 
-#distance-filter{
+#distance-filter {
   width: 200px;
 }
 
-#result-cards{
+#result-cards {
   padding: 1em;
   display: grid;
   grid-template-columns: repeat(4, [col-start] auto [col-end]);
@@ -79,17 +80,17 @@ h1{
   column-gap: 1em;
 }
 
-calcite-card{
+calcite-card {
   --calcite-card-corner-radius: var(--calcite-corner-radius-round);
   --calcite-card-shadow: var(--calcite-shadow-md);
 }
 
-calcite-notice.hide{
+calcite-notice.hide {
   display: none;
   transition: 1s;
 }
 
-calcite-notice.show{
+calcite-notice.show {
   display: initial;
   transition: 1s;
 }
