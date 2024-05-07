@@ -31,10 +31,14 @@ body {
   display: flex;
   flex-flow: column;
   height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 h1 {
-  font-family: "Berkshire Swash", serif;
+  font-family: "Yeseva One", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 48px;
