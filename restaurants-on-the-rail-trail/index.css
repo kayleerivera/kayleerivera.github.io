@@ -90,6 +90,7 @@ h1 {
   position: relative;
   animation-name: filter-slide;
   animation-duration: 1s;
+  animation-delay: 2s;
 }
 
 .filter {
