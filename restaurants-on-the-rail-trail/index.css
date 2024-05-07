@@ -48,14 +48,12 @@ body {
   }
 }
 
-@keyframes filter-fade {
+@keyframes filter-slide {
   from {
-    background-color: #6a3d5a;
-    box-shadow: none;
+    left: calc(100cqw * -1);
   }
   to {
-    background-color: #fbfafa;
-    box-shadow: var(--calcite-shadow-md);
+    left: 0px;
   }
 }
 
@@ -70,7 +68,7 @@ h1 {
   color: #fbfafa;
   text-shadow: 1px 1px 2px hsl(321, 27%, 15%);
   animation-name: header-fade;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 #main {
@@ -89,9 +87,9 @@ h1 {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   box-shadow: var(--calcite-shadow-md);
-  transition: 1s;
-  animation-name: filter-fade;
-  animation-duration: 3s;
+  position: relative;
+  animation-name: filter-slide;
+  animation-duration: 1s;
 }
 
 .filter {
