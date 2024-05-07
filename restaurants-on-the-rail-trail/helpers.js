@@ -89,7 +89,7 @@ export function getStations() {
 }
 
 export function getCategories() {
-    fetch("https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/categories?filter=restaurant&f=json&token=AAPKa4a834dd14fe464dac0765c135502466bJTidcQFYUmhVZZBjlyvw3VQ7MvAZDnzGuRjHP2Z3u1KeLbCih162STl535C4mpc", {
+    fetch("https://places-api.arcgis.com/arcgis/rest/services/places-service/v1/categories?filter=restaurant&pageSize=20&f=json&token=AAPKa4a834dd14fe464dac0765c135502466bJTidcQFYUmhVZZBjlyvw3VQ7MvAZDnzGuRjHP2Z3u1KeLbCih162STl535C4mpc", {
         method: "GET",
         headers: { Accept: "application/json" }
     })
