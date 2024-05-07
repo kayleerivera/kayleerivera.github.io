@@ -37,12 +37,12 @@ h1 {
   font-family: "Berkshire Swash", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 40px;
+  font-size: 48px;
   display: flex;
   justify-content: flex-start;
-  letter-spacing: -1%;
+  /* letter-spacing: -1%; */
   color: #fbfafa;
-  text-shadow: 1px 1px 2px #6a3d5a;
+  text-shadow: 1px 1px 2px hsl(321, 27%, 15%);
 }
 
 #main {
