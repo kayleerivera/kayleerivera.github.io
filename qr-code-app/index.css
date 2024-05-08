@@ -16,8 +16,8 @@ body {
 
 #card {
   border-radius: 20px;
-  /* width: fit-content;
-  display: table; 
+  width: min-content;
+  /* display: table; 
   display: grid;
   grid-template-columns: min-content;
   grid-template-rows: repeat(3, auto);
