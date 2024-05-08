@@ -16,6 +16,7 @@ body {
 
 #card {
   border-radius: 20px;
+  position: absolute;
   padding: 16px;
   top: 50%;
   left: 50%;
@@ -32,14 +33,22 @@ img {
 }
 
 h1 {
-  overflow: auto;
   font-size: 22px;
   font-weight: 700;
   color: #1f314f;
+  text-wrap: wrap;
 }
 
 p {
-  overflow: auto;
   font-size: 15px;
   color: #7d889e;
+  text-wrap: wrap;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
