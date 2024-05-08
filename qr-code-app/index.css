@@ -25,15 +25,11 @@ body {
   box-shadow: 0px 25px 25px hsla(0, 0%, 0%, 0.048);
 }
 
-#qr-background {
-  border-radius: 10px;
-  background-color: #2c7dfa;
-  height: 288px;
-  width: 288px;
-}
-
 img {
   padding: 40%;
+  border-radius: 10px;
+  width: 288px;
+  height: 288px;
 }
 
 h1 {
