@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: hsl(220, 15%, 55%);
+  background-color: #d5e1ef;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
   display: flex;
@@ -19,6 +19,7 @@ body {
 
 #card {
   border-radius: 20px;
+  margin: 16px;
   height: 497px;
   width: 320px;
   background-color: hsl(0, 0%, 100%);
@@ -26,7 +27,6 @@ body {
 }
 
 img {
-  padding: 40%;
   border-radius: 10px;
   width: 288px;
   height: 288px;
