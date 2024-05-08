@@ -26,33 +26,33 @@ body {
   transform: translate(-50%, -50%);
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0px 25px 25px hsla(0, 0%, 0%, 0.048);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
 }
 
 img {
   border-radius: 10px;
   width: 288px;
   height: 288px;
-  display: block;
 }
 
 h1 {
   font-size: 22px;
   font-weight: 700;
   color: #1f314f;
-  display: table-caption;
-  caption-side: bottom;
 }
 
 p {
   font-size: 15px;
   color: #7d889e;
-  display: table-caption;
-  caption-side: bottom;
 }
 
 .attribution {
-  position: absolute;
-  bottom: calc(100% - height);
+  position: fixed;
+  bottom: 0;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
