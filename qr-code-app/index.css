@@ -7,10 +7,6 @@
   color: hsl(228, 45%, 44%);
 }
 
-html {
-  height: 100%;
-}
-
 body {
   background-color: #d5e1ef;
   font-family: "Outfit", sans-serif;
