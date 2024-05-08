@@ -16,6 +16,8 @@ body {
 
 #card {
   border-radius: 20px;
+  width: fit-content;
+  display: table;
   position: absolute;
   padding: 16px;
   top: 50%;
@@ -30,24 +32,27 @@ img {
   border-radius: 10px;
   width: 288px;
   height: 288px;
+  display: block;
 }
 
 h1 {
   font-size: 22px;
   font-weight: 700;
   color: #1f314f;
-  text-wrap: wrap;
+  display: table-caption;
+  caption-side: bottom;
 }
 
 p {
   font-size: 15px;
   color: #7d889e;
-  text-wrap: wrap;
+  display: table-caption;
+  caption-side: bottom;
 }
 
 .attribution {
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% - height);
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
