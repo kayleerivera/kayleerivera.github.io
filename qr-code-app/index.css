@@ -16,8 +16,14 @@ body {
 
 #card {
   border-radius: 20px;
-  width: fit-content;
-  display: table;
+  /* width: fit-content;
+  display: table; 
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
+  place-content: center; */
   position: absolute;
   padding: 16px;
   top: 50%;
@@ -26,12 +32,6 @@ body {
   transform: translate(-50%, -50%);
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0px 25px 25px hsla(0, 0%, 0%, 0.048);
-  display: grid;
-  grid-template-columns: min-content;
-  grid-template-rows: repeat(3, auto);
-  grid-column-gap: 0px;
-  grid-row-gap: 10px;
-  place-content: center;
 }
 
 img {
