@@ -30,7 +30,7 @@ body {
   grid-template-columns: min-content;
   grid-template-rows: repeat(3, auto);
   grid-column-gap: 0px;
-  grid-row-gap: 16px;
+  grid-row-gap: 10px;
   place-content: center;
 }
 
