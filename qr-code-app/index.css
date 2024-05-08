@@ -19,7 +19,7 @@ body {
 
 #card {
   border-radius: 20px;
-  margin: 16px;
+  padding: 16px;
   height: 497px;
   width: 320px;
   background-color: hsl(0, 0%, 100%);
